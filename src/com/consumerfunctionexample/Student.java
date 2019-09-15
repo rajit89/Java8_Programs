@@ -2,6 +2,7 @@ package com.consumerfunctionexample;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Student {
 	
@@ -10,7 +11,8 @@ public class Student {
     private double gpa;
     private String gender;
     private int noteBooks;
-   /* private Optional<Bike> bike;
+  
+    private Optional<Bike> bike = Optional.empty();
 
     public Optional<Bike> getBike() {
         return bike;
@@ -18,7 +20,7 @@ public class Student {
 
     public void setBike(Optional<Bike> bike) {
         this.bike = bike;
-    }*/
+    }
 
     public Student(){
 
@@ -103,14 +105,9 @@ public class Student {
     }
 
     @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", gradeLevel=" + gradeLevel +
-                ", gpa=" + gpa +
-                ", gender='" + gender + '\'' +
-                ", activities=" + activities +
-                '}';
-    }
+	public String toString() {
+		return "Student [name=" + name + ", gradeLevel=" + gradeLevel + ", gpa=" + gpa + ", gender=" + gender
+				+ ", noteBooks=" + noteBooks + ", bike=" + bike + ", activities=" + activities + "]";
+	}
 
 }
